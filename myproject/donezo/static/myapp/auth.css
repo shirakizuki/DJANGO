@@ -1,0 +1,104 @@
+.bdy-cnt {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-container {
+    display: flex;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+.auth-brand {
+    background: linear-gradient(to bottom left, var(--color-mn-1), #b91c1c, var(--color-mn-2));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "Jomhuria", serif;
+}
+
+.auth-form {
+    background: white;
+    padding: 2rem 2.5rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+label {
+    font-size: 1rem;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+  
+.name-cnt {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.name-cnt .name-input-grp {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 0.5rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+  
+.input-group .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-mn-1);
+}
+  
+.input-group input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 2rem;
+    border: 1px solid var(--color-mn-1);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.input-group #firstName,
+.input-group #lastName {
+    padding: 1rem;
+}
+  
+button {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.6rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-mn-1);
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: var(--color-hg-orange);
+}

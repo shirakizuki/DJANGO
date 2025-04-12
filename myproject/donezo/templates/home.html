@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/home.css'%}">
+    <link rel="stylesheet" href="{% static 'myapp/base.css'%}">
+    <script src="https://kit.fontawesome.com/c297a84630.js" crossorigin="anonymous"></script>
+    <title>donezo</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        {% include 'component/sidebar.html' %}
+        <div class="main-content">
+            <!-- Topbar -->
+            <header class="top-bar">
+                <h2>Welcome back, <span class="highlight">{{ user.first_name }} {{ user.last_name }}</span></h2>
+                <div class="profile">
+                    <button onclick="toggleDropdown()">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+                    <div class="dropdown" id="dropdownMenu">
+                        <a href="">Profile</a>
+                        <a href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </div>
+            </header>
+            <div class="content">
+                <h3>All Tasks</h3>
+                <div class="task-list">
+                    <div class="box">
+                        <p>Add New Task</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+        window.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('dropdownMenu');
+            if (!e.target.closest('.profile')) dropdown.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>

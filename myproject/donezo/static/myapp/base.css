@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap');
+
+/* DEFINE VARIABLES */
+:root {
+    /* MAIN COLORS */
+    --color-mn-1: #F59D3A; /* TEXT AND BUTTONS */
+    --color-mn-2: #292220; /* TEXT AND ICONS */
+    /* HIGHLIGHTS */
+    --color-hg-gray: #DCDFE8;
+    --color-hg-orange: #ea580c;
+    --color-hg-lorange: #FAE9D5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--color-mn-2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-mn-2);
+    font-weight: 900;
+}
+
+a:hover {
+    color: var(--color-hg-orange); /* Optional */
+}

@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/auth.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/base.css' %}">
+    <script src="https://kit.fontawesome.com/c297a84630.js" crossorigin="anonymous"></script>
+    <title>donezo</title>
+</head>
+
+<body>
+    <div class="bdy-cnt">
+        <div class="auth-container">
+            <div class="auth-brand">
+                <h1>donezo</h1>
+            </div>
+            <div class="auth-form">
+                <h2>Hello! New User.</h2>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="messages">
+                        {% if messages %}
+                            {% for message in messages %}
+                            <p>{{ message }}</p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="name-cnt">
+                        <div class="name-input-grp">
+                            <label for="firstName">First Name</label>
+                            <div class="input-group">
+                                <input type="text" id="firstName" name="firstName" placeholder="First name"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="name-input-grp">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-group">
+                                <input type="text" id="lastName" name="lastName" placeholder="Last name"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="username">Username</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-user icon"></i>
+                            <input type="text" id="username" name="username" placeholder="Username" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-envelope icon"></i>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" id="password" name="password" placeholder="Password"
+                                required>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input type="password" id="confirmPassword" name="confirmPassword"
+                                placeholder="confirm Password" required>
+                        </div>
+                    </div>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

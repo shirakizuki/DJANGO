@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'myapp/base.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/landing.css' %}">
+    <link rel="stylesheet" href="{% static 'myapp/navbar.css' %}">
+    <title>donezo</title>
+</head>
+<body>
+    {% include 'component/navbar.html' %}
+    <div class="hero">
+        <div class=hero-text>
+            <h1><span class="highlight">Reimagine</span> <br>your productivity with <br>Smart Tasks</h1>
+            <p>Stay focused and motivated with visually appealing user <br> interface and the reminders feature that helps you focus.</p>
+        </div>
+        <div class="hero-image">
+            <img src="{% static 'images/landing-page-section.jpg' %}" alt="hero-section-image">
+        </div>
+    </div>
+</body>
+</html>

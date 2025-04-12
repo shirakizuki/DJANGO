@@ -1,0 +1,37 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4rem;
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: orange;
+    font-weight: bold;
+}
+
+.hero-text p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+  
+.hero-image img {
+    max-width: 700px;
+    height: auto;
+}
+
+.btn-orange {
+    background-color: orange;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
