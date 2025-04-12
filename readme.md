@@ -32,10 +32,12 @@ Donezo is a sleek and simple task management system that helps users organize th
 
 # Clone the repository
 git clone https://github.com/shirakizuki/DJANGO.git
-cd myproject
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Change directory
+cd myproject
 
 # Apply migrations
 python manage.py migrate
