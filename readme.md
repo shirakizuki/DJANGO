@@ -31,7 +31,7 @@ Donezo is a sleek and simple task management system that helps users organize th
 ```bash
 
 # Clone the repository
-git clone https://github.com/MarcKyle/moni-project.git
+git clone https://github.com/shirakizuki/DJANGO.git
 cd myproject
 
 # Install dependencies
